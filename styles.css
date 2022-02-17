@@ -1,0 +1,132 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+  }
+  
+  html {
+    font-size: 62.5%;
+    height: 100%;
+    background-color: black;
+    background-color: var(--light-gray);
+  }
+  
+  body {
+    width: 100%;
+    min-height: 100%;
+    margin: auto;
+    display: grid;
+    padding: 0 2.6rem;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .main {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border-radius: 1.75rem;
+      padding: 1.4rem 1.6rem;
+      background-color: var(--white);
+      gap: 2.25rem;
+      height: max-content;
+      box-shadow: 0 15px 20px 0 hsla(219, 15%, 55%, 0.213);
+  }
+  
+  .img-container {
+      display: inline-flex;
+      width: 100%;
+      border-radius: 1rem;
+      background-color: violet;
+      overflow: hidden;
+  }
+  
+  .qrcode {
+      width: 100%;
+      object-fit: contain;
+      object-position: top;
+  }
+  
+  .text-container {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 1.25rem;
+  }
+  
+  .text-container .heading {
+      font-size: 1.6rem;
+      padding: 0 1.25rem;
+      font-weight: 700;
+      letter-spacing: -.4px;
+      color: var(--dark-blue);
+  }
+  
+  .text-container .desc {
+      font-size: 1rem;
+      padding: 0 1.75rem;
+      margin-bottom: 2.4rem;
+      color: var(--grayish-blue);
+  }
+  
+  @media (min-width: 20em){
+      .text-container .heading {
+          font-size: 1.85rem;
+          padding: 0 1.25rem;
+      }
+      
+      .text-container .desc {
+          font-size: 1.25rem;
+          padding: 0 1.75rem;
+      }    
+  }
+  
+  
+  @media (min-width: 22em){
+      .text-container .heading {
+          font-size: 2.2rem;
+          padding: 0 1.25rem;
+      }
+      
+      .text-container .desc {
+          font-size: 1.5rem;
+          padding: 0 1.75rem;
+      }    
+  }
+  
+  @media (min-width: 23em){
+      body { 
+          max-width: 375px;
+      }
+  
+      .main {
+          border-radius: 2rem;
+          padding: 1.8rem;
+          gap: 2.5rem;
+      }
+  
+      .text-container {
+          gap: 1.25rem;
+      }
+      
+      .text-container .heading {
+          font-size: 2.3rem;
+          padding: 0 1.25rem;
+      }
+      
+      .text-container .desc {
+          font-size: 1.55rem;
+          padding: 0 1.75rem;
+          margin-bottom: 2rem;
+      }    
+  }
